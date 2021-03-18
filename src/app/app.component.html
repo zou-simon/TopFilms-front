@@ -1,0 +1,17 @@
+<div *ngFor="let film of films">
+  {{film.titre}}
+</div>
+<app-menu></app-menu>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8">
+      <app-content></app-content>
+    </div>
+    <div class="col">
+      <app-sidebar></app-sidebar>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
