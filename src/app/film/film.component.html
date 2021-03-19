@@ -5,7 +5,10 @@
             <div class="col-md-10 col-lg-8 mx-auto">
                 <div class="site-heading d-md-flex align-items-center" style="padding: 100px 0;">
                     <img src="{{film.imageUrl}}" class="mr-md-5 rounded" style="width: 244px; height: 364px;" alt="Poster de {{film.titre}}"/>
-                    <h1 style="font-size: 50px;">{{film.titre}}</h1>
+                    <div>
+                        <h1 style="font-size: 50px;">{{film.titre}}</h1>
+                        <p>{{film.genre}}</p>
+                    </div>    
                 </div>
             </div>
         </div>
@@ -13,8 +16,6 @@
 </header>
 
 <div class="container">
-    <h2>{{film.titre}}</h2>
-    <p>{{film.genre}}</p>
     <h3>Synopsis</h3>
     <p>{{film.synopsis}}</p>
     <p>Date de sortie : {{film.dateSortie}}</p>

@@ -109,11 +109,17 @@ header.masthead .site-heading {
   padding: 200px 0 150px;
   color: #fff;
 }
+header.masthead .home-site-heading {
+  padding: 172px 0 150px;
+}
 @media only screen and (min-width: 768px) {
   header.masthead .page-heading,
   header.masthead .post-heading,
   header.masthead .site-heading {
     padding: 200px 0;
+  }
+  header.masthead .home-site-heading {
+    padding: 186px 0;
   }
 }
 header.masthead .page-heading,
