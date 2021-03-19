@@ -21,9 +21,7 @@ export class FilmComponent implements OnInit {
       synopsis: '',
       dateSortie: '',
       realisateur: '',
-      duree: 0,
-      sommeNotes: 0,
-      nbrNotes: 0
+      duree: 0
     };
   }
 
