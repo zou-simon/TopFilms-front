@@ -1,0 +1,14 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="border-top-0">Top Films</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let film of films">
+                <td><a [routerLink]="['/films', film.id]">?.&nbsp;{{film.titre}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

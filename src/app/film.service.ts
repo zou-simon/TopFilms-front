@@ -12,16 +12,22 @@ export class FilmService {
 
   constructor(private http: HttpClient) { }
 
-  public getFilm(): Observable<Film[]> {
+  public getFilms(): Observable<Film[]> {
     return this.http.get<Film[]>(`${this.apiServerUrl}/films`);
+  }
+
+  public getFilm(filmId: number): Observable<Film> {
+    return this.http.get<Film>(`${this.apiServerUrl}/films/${filmId}`);
   }
 
   public addFilm(film: Film): Observable<Film> {
     return this.http.post<Film>(`${this.apiServerUrl}/film/add`, film);
   }
+
   public updateFilm(film: Film): Observable<Film> {
     return this.http.put<Film>(`${this.apiServerUrl}/film/update`, film);
   }
+
   public deleteFilm(filmId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/film/delete/${filmId}`);
   }

@@ -34,7 +34,7 @@ a {
 }
 a:focus,
 a:hover {
-  color: #007bff;
+  opacity: 0.5;
 }
 blockquote {
   font-style: italic;
