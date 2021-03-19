@@ -2,12 +2,12 @@
     <table class="table">
         <thead>
             <tr>
-                <th class="border-top-0">Top Films</th>
+                <th class="border-top-0" style="font-size:larger;">Top Films</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let film of films">
-                <td><a [routerLink]="['/films', film.id]">?.&nbsp;{{film.titre}}</a></td>
+            <tr *ngFor="let film of films | slice:0:10; index as i">
+                <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
             </tr>
         </tbody>
     </table>
