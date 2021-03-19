@@ -7,4 +7,6 @@ export interface Film {
     dateSortie: string;
     realisateur: string;
     duree: number;
+    sommeNotes: number;
+    nbrNotes: number;
 }

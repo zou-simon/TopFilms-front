@@ -1,4 +1,4 @@
-<header class="masthead" style="background-color: black;">
+<header class="masthead" style="background-image: url('/assets/images/background.jpg');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -10,3 +10,288 @@
         </div>
     </div>
 </header>
+
+<div class="container">
+    <div class="row">
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Aventure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Biopic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Catastrophe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Comédie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Policier / Crime</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Documentaire</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Espionnage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Fantastique</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Fantasy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Guerre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Historique</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Horreur/ Epouvante</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Musical</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Romance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Science-Fiction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Super-Héros</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Survival</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Thriller</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0" style="font-size:larger;">Top Western</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let film of films | slice:0:10; index as i">
+                        <td>{{i + 1}}.&nbsp;<a [routerLink]="['/films', film.id]">{{film.titre}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

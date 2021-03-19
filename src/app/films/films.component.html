@@ -1,4 +1,4 @@
-<header class="masthead" style="background-color: black;">
+<header class="masthead" style="background-image: url('/assets/images/background.jpg');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -11,6 +11,13 @@
     </div>
 </header>
 
-<div>
-    
+<div class="container">
+    <div class="row">
+        <div class="col-3" *ngFor="let film of films">
+            <a [routerLink]="['/films', film.id]">
+                <img src="{{film.imageUrl}}" class="rounded w-100" style="height: 364px;" alt="Poster de {{film.titre}}" />
+                <p class="text-center">{{film.titre}}</p>
+            </a>
+        </div>
+    </div>
 </div>
