@@ -16,6 +16,9 @@ export class FilmComponent implements OnInit {
     this.film = {
       id: 0,
       titre: '',
+      imageUrl: '',
+      genre: '',
+      synopsis: '',
       dateSortie: '',
       realisateur: '',
       duree: 0
