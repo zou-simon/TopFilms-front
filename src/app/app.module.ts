@@ -1,20 +1,20 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { FilmService } from './film.service';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { MenuComponent } from './menu/menu.component';
-import { ContentComponent } from './home/content/content.component';
-import { SidebarComponent } from './home/sidebar/sidebar.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { ClassementsComponent } from './classements/classements.component';
-import { FilmsComponent } from './films/films.component';
-import { CompteComponent } from './compte/compte.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { FilmComponent } from './film/film.component';
+import { FilmService } from './services/film.service';
+import { MenuComponent } from './components/menu/menu.component';
+import { ContentComponent } from './components/home/content/content.component';
+import { SidebarComponent } from './components/home/sidebar/sidebar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { ClassementsComponent } from './components/classements/classements.component';
+import { FilmsComponent } from './components/films/films.component';
+import { CompteComponent } from './components/compte/compte.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { FilmComponent } from './components/film/film.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import { FilmComponent } from './film/film.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path: '', 

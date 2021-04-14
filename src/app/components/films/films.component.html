@@ -1,0 +1,101 @@
+<header class="masthead" style="background-image: url('/assets/images/background.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <div class="site-heading">
+                    <h1>Les films</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="card col-lg-3 col-sm-6 col-12 border-0" *ngFor="let film of films">
+            <a [routerLink]="['/films', film.id]">
+                <div class="bg-secondary rounded d-flex align-items-center text-center m-auto" style="min-width: 200px; max-width: 300px;">
+                    <img src="{{film.imageUrl}}" class="card-img-top text-white" alt="Poster de {{film.titre}}">
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-center">{{film.titre}}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-dark fixed-top container" role="alert" *ngIf="showMsg" style="top: 10px;">
+    {{alertMessage}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<button type="button" class="btn btn-secondary" style="position: fixed; bottom: 20px; right: 20px;" data-toggle="modal" data-target="#modal" title="Ajouter un film">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+    </svg>
+</button>
+
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Ajouter un film</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="filmForm">
+                <div class="form-group">
+                    <label for="titre" class="col-form-label">Titre</label>
+                    <input type="text" class="form-control" id="titre" formControlName="titre">
+                </div>
+                <div class="form-group">
+                    <input type="file" id="image" formControlName="imageUrl" accept="image/*" (change)="onFileSelected($event)">
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Genres
+                    </button>
+                    <div class="dropdown-menu p-2" aria-labelledby="dropdownMenuButton" (click)="onDropDownEvent($event)" style="overflow-y: auto; max-height: 100px;">
+                        <div class="form-check" *ngFor="let genre of listGenres">
+                            <input class="form-check-input" type="checkbox" value="{{genre}}" id="{{genre}}" [checked]="filmGenre.includes(genre)" (change)="onCheckboxChange($event)">
+                            <label class="form-check-label" for="{{genre}}">
+                            {{genre}}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="synopsis" class="col-form-label">Synopsis</label>
+                    <textarea class="form-control" id="synopsis" formControlName="synopsis"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="date-sortie" class="col-form-label">Date de sortie</label>
+                    <input type="date" class="form-control" id="date-sortie" formControlName="dateSortie">
+                </div>
+                <div class="form-group">
+                    <label for="realisateur" class="col-form-label">Réalisateur</label>
+                    <input type="text" class="form-control" id="realisateur" formControlName="realisateur">
+                </div>
+                <div class="form-group">
+                    <label for="duree" class="col-form-label">Durée du film (en minutes)</label>
+                    <input type="number" class="form-control" id="duree" formControlName="duree">
+                </div>
+                <div class="form-group">
+                    <label for="bandeAnnonce" class="col-form-label">Bande annonce</label>
+                    <input type="text" class="form-control" id="bandeAnnonce" formControlName="bandeAnnonce">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" (click)="createFilm()" data-dismiss="modal">Ajouter</button>
+            <button type="button" class="btn btn-danger" (click)="resetInput()" data-dismiss="modal">Annuler</button>
+        </div>
+        </div>
+    </div>
+</div>

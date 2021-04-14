@@ -1,14 +1,14 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Film } from '../film';
-import { FilmService } from '../film.service';
+import { Film } from '../../film';
+import { FilmService } from '../../services/film.service';
 
 @Component({
-  selector: 'app-films',
-  templateUrl: './films.component.html',
-  styleUrls: ['./films.component.css']
+  selector: 'app-classements',
+  templateUrl: './classements.component.html',
+  styleUrls: ['./classements.component.css']
 })
-export class FilmsComponent implements OnInit {
+export class ClassementsComponent implements OnInit {
   public films: Film[];
 
   constructor(private filmService: FilmService) {}

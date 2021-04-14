@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { Film } from './film';
+import { Film } from '../film';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -21,14 +21,14 @@ export class FilmService {
   }
 
   public addFilm(film: Film): Observable<Film> {
-    return this.http.post<Film>(`${this.apiServerUrl}/film/add`, film);
+    return this.http.post<Film>(`${this.apiServerUrl}/films`, film);
   }
 
   public updateFilm(film: Film): Observable<Film> {
-    return this.http.put<Film>(`${this.apiServerUrl}/film/update`, film);
+    return this.http.patch<Film>(`${this.apiServerUrl}/films/${film.id}`, film);
   }
 
   public deleteFilm(filmId: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiServerUrl}/film/delete/${filmId}`);
+    return this.http.delete<void>(`${this.apiServerUrl}/films/${filmId}`);
   }
 }

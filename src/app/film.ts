@@ -7,4 +7,5 @@ export interface Film {
     dateSortie: string;
     realisateur: string;
     duree: number;
+    bandeAnnonce: string;
 }
